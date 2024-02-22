@@ -148,10 +148,10 @@ public class GetApisTest {
                 2
                 );
         Product actualProduct = RestAssured.given().
-                                                        queryParams("id",productId).
-                                                    when().
-                                                        get(endPoint).
-                                                            as(Product.class);
+                                                queryParams("id",productId).
+                                            when().
+                                                get(endPoint).
+                                                as(Product.class);
 
         assertThat(expectedProduct,samePropertyValuesAs(actualProduct));
     }
